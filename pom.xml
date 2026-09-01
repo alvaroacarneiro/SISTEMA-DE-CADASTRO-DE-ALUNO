@@ -13,7 +13,7 @@
         <relativePath/> 
     </parent>
 
-    <groupId>com.cadastro-de-aluno</groupId>
+    <groupId>com.cadastrodealuno</groupId>
     <artifactId>sistema-alunos-api</artifactId>
     <version>1.0.0</version>
     <name>sistema-alunos-api</name>
