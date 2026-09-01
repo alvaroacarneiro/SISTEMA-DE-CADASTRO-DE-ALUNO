@@ -18,6 +18,11 @@ public class AlunoController {
         this.service = service;
     }
 
+@GetMapping("/")
+public String home() {
+    return "Bem-vindo à API de Cadastro de Alunos! Acesse /alunos para listar os cadastrados.";
+}
+    
     @GetMapping
     public List<Aluno> listar() {
         return service.listarTodos();
