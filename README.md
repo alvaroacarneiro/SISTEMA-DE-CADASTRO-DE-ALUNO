@@ -15,7 +15,7 @@ API REST para gerenciamento de alunos, desenvolvida em **Spring Boot** com **Jav
 
 ## 🌐 Acesse a API
 
-- **Base URL:** [https://sistema-alunos-api.onrender.com](https://sistema-alunos-api.onrender.com)
+- **Base URL:** [https://sistema-de-cadastro-de-aluno-2.onrender.com](https://sistema-de-cadastro-de-aluno-2.onrender.com/)
 - **Documentação Swagger:** [https://sistema-alunos-api.onrender.com/swagger-ui/index.html](https://sistema-alunos-api.onrender.com/swagger-ui/index.html)
 
 ---
