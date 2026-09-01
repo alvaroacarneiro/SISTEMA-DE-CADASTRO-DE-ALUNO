@@ -1,78 +1,88 @@
-📚 Sistema de Cadastro de Alunos
-https://img.shields.io/badge/Java-17%252B-orange?logo=java
-https://img.shields.io/badge/Maven-3.8%252B-blue?logo=apache-maven
-https://img.shields.io/badge/License-MIT-yellow.svg
-https://img.shields.io/badge/status-em%2520desenvolvimento-brightgreen
+# 📚 Sistema de Cadastro de Alunos
 
-Sistema de gerenciamento acadêmico desenvolvido em Java 17 com persistência em CSV. Ideal para portfólio e estudos de Orientação a Objetos, Manipulação de Arquivos e Boas Práticas de Programação.
+[![Java](https://img.shields.io/badge/Java-17%2B-orange?style=for-the-badge&logo=openjdk&logoColor=white)](https://adoptium.net/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
+[![GitHub repo size](https://img.shields.io/github/repo-size/alvaroacarneiro/SISTEMA-DE-CADASTRO-DE-ALUNO?style=for-the-badge)](https://github.com/alvaroacarneiro/SISTEMA-DE-CADASTRO-DE-ALUNO)
+[![GitHub last commit](https://img.shields.io/github/last-commit/alvaroacarneiro/SISTEMA-DE-CADASTRO-DE-ALUNO?style=for-the-badge)](https://github.com/alvaroacarneiro/SISTEMA-DE-CADASTRO-DE-ALUNO/commits/main)
 
-🎯 Objetivo
-Este projeto foi criado para demonstrar conceitos fundamentais da programação Java em um contexto real:
+---
 
-Aplicação dos pilares da POO (Encapsulamento, Herança, Polimorfismo, Abstração)
+## 📖 Sobre o projeto
 
-Manipulação de arquivos (leitura/escrita com BufferedReader e FileWriter)
+O **Sistema de Cadastro de Alunos** é uma aplicação desenvolvida em **Java 17** que permite gerenciar informações acadêmicas de forma simples e eficiente. Com uma interface interativa via terminal, o sistema oferece operações completas de CRUD (Create, Read, Update, Delete) com persistência automática em arquivo **CSV**.
 
-Uso de coleções (ArrayList) para gerenciar dados em memória
+Este projeto foi concebido para demonstrar a aplicação prática dos fundamentos da **Programação Orientada a Objetos**, **manipulação de arquivos** e **estruturas de dados** em Java, sendo uma excelente base para estudos e portfólio.
 
-Tratamento de exceções e validação de dados
+---
 
-Estruturação de um sistema modular (separação em camadas)
+## 🎯 Funcionalidades
 
-✨ Funcionalidades
-Operação	Descrição	Detalhe
-➕ Adicionar aluno	Insere um novo aluno no sistema	Valida se a matrícula já existe; notas entre 0 e 10
-📋 Listar todos	Exibe todos os alunos com suas notas, média e status	Média calculada automaticamente; status "Aprovado" (≥7.0) ou "Reprovado"
-🔍 Buscar por matrícula	Localiza um aluno específico	Retorna os dados completos do aluno ou mensagem de não encontrado
-🗑️ Remover aluno	Exclui um aluno pelo número de matrícula	Remove permanentemente do arquivo CSV
-📊 Média geral da turma	Calcula a média aritmética de todos os alunos	Útil para análise de desempenho da turma
-💾 Persistência automática	Os dados são salvos em dados/alunos.csv	Os alunos permanecem mesmo após o término do programa
-🛠️ Tecnologias Utilizadas
-Tecnologia	Finalidade
-Java 17 (LTS)	Linguagem principal
-Java I/O (BufferedReader/FileWriter)	Leitura e escrita de arquivos CSV
-Coleções (ArrayList)	Armazenamento em memória
-POO (Encapsulamento, Herança)	Modelagem de classes e responsabilidades
-Maven (opcional)	Gerenciamento de dependências e build (pode ser adaptado)
-📂 Estrutura do Projeto
-text
+| Operação                | Descrição                                                                 |
+| :---------------------- | :------------------------------------------------------------------------ |
+| ➕ **Adicionar aluno**  | Cadastra um novo aluno com validação de matrícula duplicada e notas entre 0 e 10. |
+| 📋 **Listar todos**     | Exibe todos os alunos com nome, matrícula, média e status (Aprovado/Reprovado). |
+| 🔍 **Buscar por matrícula** | Localiza e exibe os dados completos de um aluno específico.            |
+| 🗑️ **Remover aluno**    | Remove permanentemente um aluno do sistema, com confirmação.               |
+| 📊 **Média geral**      | Calcula e exibe a média aritmética de todos os alunos cadastrados.         |
+| 💾 **Persistência automática** | Os dados são salvos em `dados/alunos.csv`, garantindo integridade entre execuções. |
+
+---
+
+## 🛠️ Tecnologias utilizadas
+
+<div align="center">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original-wordmark.svg" alt="Java" width="60" height="60"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original-wordmark.svg" alt="Git" width="60" height="60"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg" alt="GitHub" width="60" height="60"/>
+</div>
+
+- **Java 17 (LTS)** – Linguagem principal, com recursos modernos como records e pattern matching.
+- **Java I/O** – Leitura e escrita de arquivos com `BufferedReader` e `FileWriter`.
+- **Coleções** – Uso de `ArrayList` para gerenciamento dinâmico dos dados em memória.
+- **POO** – Aplicação de encapsulamento, herança e polimorfismo na modelagem das classes.
+- **Git** – Controle de versão e histórico de desenvolvimento.
+
+---
+
+## 📁 Estrutura do projeto
+
+```bash
 sistema-cadastro-alunos-java/
 ├── src/
 │   └── com/
 │       └── seuprojeto/
-│           ├── Main.java                 # Menu interativo (interface do usuário)
+│           ├── Main.java                   # Interface do usuário (menu interativo)
 │           ├── model/
-│           │   └── Aluno.java            # Classe que representa o aluno (POJO)
+│           │   └── Aluno.java              # Classe que representa a entidade Aluno
 │           └── service/
-│               └── GerenciadorAlunos.java # Lógica de negócio e persistência
+│               └── GerenciadorAlunos.java  # Camada de negócio e persistência
 ├── dados/
-│   └── alunos.csv                        # Arquivo gerado automaticamente
-├── README.md                             # Este arquivo
-└── .gitignore
-🚀 Como Executar
-Pré-requisitos
-Java 17 (ou superior) instalado (Download)
+│   └── alunos.csv                          # Arquivo de dados gerado automaticamente
+├── .gitignore
+└── README.md
+🚀 Como executar
+Pré‑requisitos
+Java 17+ instalado
 
-Git (opcional, para clonar o repositório)
+(Opcional) Git para clonar o repositório
 
 Passo a passo
-Clone o repositório:
-
 bash
+# 1. Clone o repositório
 git clone https://github.com/alvaroacarneiro/SISTEMA-DE-CADASTRO-DE-ALUNO.git
 cd SISTEMA-DE-CADASTRO-DE-ALUNO
-Compile os arquivos:
 
-bash
+# 2. Compile todos os arquivos
 javac -d out src/com/seuprojeto/*.java src/com/seuprojeto/model/*.java src/com/seuprojeto/service/*.java
-Execute o sistema:
+
+# 3. Execute a aplicação
+java -cp out com.seuprojeto.Main
+Nota: Se preferir, você pode importar o projeto em uma IDE (IntelliJ, Eclipse, VS Code) e executar a classe Main diretamente.
+
+🧪 Exemplo de uso
+Ao executar o sistema, o usuário se depara com o seguinte menu interativo:
 
 bash
-java -cp out com.seuprojeto.Main
-💡 Dica: Você também pode usar uma IDE como IntelliJ IDEA, Eclipse ou VS Code para executar diretamente a classe Main.
-
-🧪 Exemplo de Uso (Menu Interativo)
-text
 ========================================
   📚 SISTEMA DE CADASTRO DE ALUNOS  
 ========================================
@@ -91,59 +101,10 @@ Nota 1: 8.5
 Nota 2: 7.0
 Nota 3: 9.0
 ✅ Aluno João Silva cadastrado com sucesso!
-📄 Formato do Arquivo CSV
-Os dados são salvos em dados/alunos.csv com o seguinte formato:
+Ao listar os alunos:
 
-csv
-matricula,nome,nota1,nota2,nota3
-2024001,João Silva,8.5,7.0,9.0
-2024002,Maria Oliveira,9.0,8.5,9.5
-Cada linha representa um aluno e pode ser facilmente editada em qualquer editor de planilhas.
-
-🔧 Possíveis Melhorias Futuras
-Sugestão	Descrição
-🗄️ Banco de Dados	Substituir o CSV por SQLite ou PostgreSQL para persistência robusta
-🖥️ Interface Gráfica	Criar uma interface com Java Swing ou JavaFX para melhor experiência
-🧪 Testes Automatizados	Adicionar testes unitários com JUnit para garantir qualidade do código
-📊 Relatórios	Gerar relatórios em PDF ou Excel com estatísticas da turma
-🔐 Autenticação	Implementar login para acesso restrito ao sistema
-🌐 API REST	Expor os dados como uma API web usando Spring Boot
-📘 Aprendizados
-Este projeto me permitiu consolidar conhecimentos em:
-
-Programação Orientada a Objetos (classes, encapsulamento, herança)
-
-Manipulação de arquivos em Java (leitura/escrita com I/O)
-
-Tratamento de exceções e validação de entrada do usuário
-
-Estruturação de código em pacotes para melhor organização
-
-Controle de versão com Git e GitHub
-
-🤝 Contribuição
-Contribuições são sempre bem-vindas! Se você tem sugestões ou correções, siga os passos:
-
-Faça um fork do projeto.
-
-Crie sua branch (git checkout -b feature/nova-funcionalidade).
-
-Faça commit das suas mudanças (git commit -m 'Adiciona nova funcionalidade').
-
-Envie para o repositório (git push origin feature/nova-funcionalidade).
-
-Abra um Pull Request.
-
-📄 Licença
-Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
-
-📬 Contato
-Autor: Álvaro Carneiro
-
-GitHub: alvaroacarneiro
-
-LinkedIn: (https://www.linkedin.com/in/alvaroacarneiro/)
-
-⭐ Se este projeto te ajudou, considere dar uma estrela no GitHub!
-Isso me motiva a continuar criando conteúdos de qualidade para a comunidade. 😊
-
+bash
+--- LISTA DE ALUNOS ---
+📌 Matrícula: 2024001 | Nome: João Silva | Média: 8,17 | Status: ✅ APROVADO
+📌 Matrícula: 2024002 | Nome: Maria Oliveira | Média: 9,00 | Status: ✅ APROVADO
+Total de alunos: 2
