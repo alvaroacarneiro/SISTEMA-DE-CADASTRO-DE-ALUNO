@@ -1,5 +1,5 @@
 
-package com.cadastro-de-aluno.controller;
+package com.cadastrodealuno.controller;
 
 import com.seuprojeto.model.Aluno;
 import com.seuprojeto.service.AlunoService;
