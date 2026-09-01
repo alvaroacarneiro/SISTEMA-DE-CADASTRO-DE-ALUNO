@@ -14,25 +14,35 @@
 
     <groupId>com.example</groupId>
     <artifactId>sistema-alunos-api</artifactId>
-    <version>1.0.0</version>
+    <version>2.0.0</version>
     <name>sistema-alunos-api</name>
-    <description>API REST de Cadastro de Alunos</description>
+    <description>API REST de Cadastro de Alunos - Versão Melhorada</description>
 
     <properties>
         <java.version>17</java.version>
     </properties>
 
     <dependencies>
+        <!-- Spring Web -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
+        <!-- Validação de dados -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-validation</artifactId>
         </dependency>
 
+        <!-- Swagger / OpenAPI (Documentação automática) -->
+        <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+            <version>2.6.0</version>
+        </dependency>
+
+        <!-- DevTools -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
@@ -46,7 +56,6 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <!-- SEM CONFIGURAÇÃO mainClass - ele acha automaticamente -->
             </plugin>
         </plugins>
     </build>
