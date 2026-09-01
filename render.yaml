@@ -1,11 +1,7 @@
 services:
   - type: web
     name: sistema-alunos-api
-    runtime: image
-    image: maven:3.8.6-openjdk-17
+    runtime: docker
+    repo: https://github.com/alvaroacarneiro/SISTEMA-DE-CADASTRO-DE-ALUNO
     plan: free
-    buildCommand: mvn clean package -DskipTests
-    startCommand: java -jar target/*.jar
-    envVars:
-      - key: PORT
-        value: 10000
+    dockerfilePath: ./Dockerfile
